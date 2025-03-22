@@ -1,0 +1,39 @@
+"""
+Even or Odd Checker
+
+This module contains functions to obtain an integer from the user and determine whether it is even or odd.
+It demonstrates function decomposition, input handling, and modular design.
+"""
+
+def get_integer_input() -> int:
+    """
+    Prompts the user to enter an integer and validates the input.
+    Returns:
+        int: A valid integer entered by the user.
+    """
+    while True:
+        try:
+            number = int(input("Enter an integer: "))
+            return number
+        except ValueError:
+            print("Invalid input. Please enter a valid integer.")
+
+def check_even_odd(number: int) -> str:
+    """
+    Determines if a given number is even or odd.
+    
+    Args:
+        number (int): The integer to be checked.
+    
+    Returns:
+        str: A message stating whether the number is even or odd.
+    """
+    if number % 2 == 0:
+        return f"{number} is an Even number."
+    return f"{number} is an Odd number."
+
+# Main program flow
+if __name__ == "__main__":
+    user_number = get_integer_input()
+    result = check_even_odd(user_number)
+    print(result)
