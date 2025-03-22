@@ -31,5 +31,5 @@ def main() -> None:
     result = check_even_odd(number)
     print(result)
 
-if _name_ == "_main_":
+if __name__== "__main__":
     main()
